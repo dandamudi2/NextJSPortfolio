@@ -23,19 +23,19 @@ const Projects:React.FC<ProjectsProps> = () => {
                <div className='grid md:grid-cols-2 gap-8'>
                  <Projectitem 
                   title='Property Finder' 
-                   backgroundImg={PropertyImg}
+                   backgroundImg={PropertyImg.src}
                    projectUrl={'/property'}  />
               <Projectitem 
                   title='Crypto' 
-                   backgroundImg={cryptoImg}
+                   backgroundImg={cryptoImg.src}
                    projectUrl={'/crypto'}  />
                <Projectitem 
                   title='Netflix' 
-                   backgroundImg={netflixImg}
+                   backgroundImg={netflixImg.src}
                    projectUrl={'/netflix'}  />
              <Projectitem 
                   title='Twich' 
-                   backgroundImg={twitchImg}
+                   backgroundImg={twitchImg.src}
                    projectUrl={'/twitch'}  />
                    
             </div>
