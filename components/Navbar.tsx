@@ -22,7 +22,8 @@ const Navbar:React.FC = () => {
        
         <div className='fixed left-0 top-0 w-full h-20 shadow-xl z-[100] ease-in-out duration-300'>
             <div className='flex justify-between items-center w-full h-full px-2 2xl:px-16'>
-              <Image src={NavLogo} alt="" width={90}  height={50}  />
+              {/* <Image src={NavLogo} alt="" width={90}  height={50}  /> */}
+              <h1>Srinivasu Dandamudi</h1>
               <div>
                 <ul className='hidden md:flex'>
                     <Link className='ml-10 text-sm uppercase hover:border-b-3'  href='/'>
