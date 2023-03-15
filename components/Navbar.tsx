@@ -1,17 +1,36 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import NavLogo from '../public/assets/navLogo.png';
 
 import { AiOutlineMenu, AiOutlineClose, AiOutlineMail } from 'react-icons/ai';
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
 import { BsPersonLinesFill } from 'react-icons/bs';
+import navLinks from '../data/navLinks';
 
 
 
 const Navbar:React.FC = () => {
     
+
+
     const [nav,setNav] =useState(false);
+    const [shadow,setShadow] = useState(false);
+
+    useEffect(()=>{
+      const handleShadow = () =>{
+        
+
+        if(window.scrollY >=90){
+             setShadow(true);
+        }
+        else{
+           setShadow(false);
+        }
+        
+      };
+      window.addEventListener('scroll',handleShadow)
+    },[]);
 
     const handleNav = ()=>{
        
@@ -20,27 +39,21 @@ const Navbar:React.FC = () => {
     }
     return (
        
-        <div className='fixed left-0 top-0 w-full h-20 shadow-xl z-[100] ease-in-out duration-300'>
+        <div className={shadow?'fixed  w-full h-20 shadow-xl z-[100]':'fixed w-full h-20 z-[100]'}>
             <div className='flex justify-between items-center w-full h-full px-2 2xl:px-16'>
               {/* <Image src={NavLogo} alt="" width={90}  height={50}  /> */}
-              <h1>Srinivasu Dandamudi</h1>
+              <div className='rounded-full bg-pink-300 p-2  hover:bg-green-200 ease-in duration-300'>
+              <h1 className='text-[#5651e5] italic'>DS</h1>
+              </div>
               <div>
                 <ul className='hidden md:flex'>
-                    <Link className='ml-10 text-sm uppercase hover:border-b-3'  href='/'>
-                        <li>Home</li>
-                   </Link>
-                   <Link className='ml-10 text-sm uppercase hover:border-b'  href='/'>
-                        <li>About</li>
-                   </Link>
-                   <Link className='ml-10 text-sm uppercase hover:border-b'  href='/'>
-                        <li>Skills</li>
-                   </Link>
-                   <Link className='ml-10 text-sm uppercase hover:border-b'  href='/'>
-                        <li>Projects</li>
-                   </Link>
-                   <Link className='ml-10 text-sm uppercase hover:border-b'  href='/'>
-                        <li>Contact</li>
-                   </Link>
+                  {
+                    navLinks.map((item,index)=>(
+                      <Link className='ml-10 text-sm uppercase hover:border-b-3' key={index} href={item.url} >
+                          <li>{item.title}</li>
+                      </Link>
+                    ))
+                  }
                 </ul>
                 <div onClick={handleNav} className='md:hidden'>
                    <AiOutlineMenu size={25} />
@@ -64,21 +77,13 @@ const Navbar:React.FC = () => {
                      </div>
                   <div className='py-4 flex flex-col'>
                   <ul className='uppercase'>
-                    <Link  href='/'>
-                    <li className='py-4 text-sm'>Home</li>
-                    </Link>
-                    <Link  href='/'>
-                    <li className='py-4 text-sm'>About</li>
-                    </Link>
-                    <Link  href='/'>
-                    <li className='py-4 text-sm'>Skills</li>
-                    </Link>
-                    <Link  href='/'>
-                    <li className='py-4 text-sm'>Projects</li>
-                    </Link>
-                    <Link  href='/'>
-                    <li className='py-4 text-sm'>Contact</li>
-                    </Link>
+                    {
+                      navLinks.map((item,index)=>(
+                        <Link key={index}  href={item.url}>
+                           <li onClick={()=>setNav(false)} className='py-4 text-sm'>{item.title}</li>
+                        </Link>
+                      ))
+                    }
                   </ul>
                     <div className='pt-40'>
                         <p className='uppercase tracking-widest text-[#5651e5] '>Let's Connect</p>
