@@ -7,8 +7,10 @@ import nextjsImg from '../public/assets/skills/nextjs.png';
 import javascriptImg from '../public/assets/skills/javascript.png';
 import reactImg from '../public/assets/skills/react.png';
 import githubImg from '../public/assets/skills/github1.png';
-import mongoImg from '../public/assets/skills/mongo.png';
+import sqlServerImg from '../public/assets/skills/SqlServer.png';
 import firebaseImg from '../public/assets/skills/firebase.png';
+import dotnetImg from '../public/assets/skills/dotnet.png';
+import tailwind from '../public/assets/skills/tailwind.png';
 
 
 
@@ -73,10 +75,20 @@ const Skills:React.FC = () => {
                        <div className='p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300'>
                          <div className='grid grid-cols-2 gap-4 justify-between items-center'>
                                <div className='m-auto'>
-                                 <Image  src={mongoImg} width={125} height={50} alt="/" />
+                                 <Image  src={sqlServerImg} width={125} height={50} alt="/" />
                                 </div>
                                 <div className='flex flex-col items-center justify-center'>
-                                    <h3>MongoDB</h3>
+                                    <h3>Sql Server </h3>
+                                 </div>
+                         </div>
+                       </div>
+                       <div className='p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300'>
+                         <div className='grid grid-cols-2 gap-4 justify-between items-center'>
+                               <div className='m-auto'>
+                                 <Image  src={dotnetImg} width={125} height={50} alt="/" />
+                                </div>
+                                <div className='flex flex-col items-center justify-center'>
+                                    <h3>DotNet Core</h3>
                                  </div>
                          </div>
                        </div>
@@ -90,13 +102,14 @@ const Skills:React.FC = () => {
                                  </div>
                          </div>
                        </div>
+                      
                        <div className='p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300'>
                          <div className='grid grid-cols-2 gap-4 justify-between items-center'>
                                <div className='m-auto'>
-                                 <Image  src={firebaseImg} width={125} height={50} alt="/" />
+                                 <Image  src={tailwind} width={125} height={50} alt="/" />
                                 </div>
                                 <div className='flex flex-col items-center justify-center'>
-                                    <h3>Firebase</h3>
+                                    <h3>Tailwind CSS</h3>
                                  </div>
                          </div>
                        </div>

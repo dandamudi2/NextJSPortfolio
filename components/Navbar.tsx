@@ -73,7 +73,11 @@ const Navbar:React.FC = () => {
                :'fixed left-[-100%] top-0'}>
                     <div>
                     <div className='flex w-full justify-between items-center'>
-                        <Image src={NavLogo}  width={80} height={35} alt="/" />
+                        {/* <Image src={NavLogo}  width={80} height={35} alt="/" /> */}
+                        <div className='p-2 flex justify-center items-center'>
+              <MdDeveloperMode className='text-black-500 mt-1' size={35} />
+              <h1 className='text-[#5651e5] font-bold' style={{fontFamily:'cursive' }}>DS</h1>
+              </div>
                         <div onClick={handleNav} className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:bg-red-300'>
                         <AiOutlineClose size={25} />
                         </div>
