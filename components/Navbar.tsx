@@ -4,9 +4,10 @@ import React, { useEffect, useState } from 'react';
 import NavLogo from '../public/assets/navLogo.png';
 
 import { AiOutlineMenu, AiOutlineClose, AiOutlineMail } from 'react-icons/ai';
-import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
-import { BsPersonLinesFill } from 'react-icons/bs';
+
 import navLinks from '../data/navLinks';
+
+import {MdDeveloperMode} from 'react-icons/md';
 
 
 
@@ -16,6 +17,8 @@ const Navbar:React.FC = () => {
 
     const [nav,setNav] =useState(false);
     const [shadow,setShadow] = useState(false);
+
+    const [navBackground,setNavBackground] =useState('');
 
     useEffect(()=>{
       const handleShadow = () =>{
@@ -32,6 +35,9 @@ const Navbar:React.FC = () => {
       window.addEventListener('scroll',handleShadow)
     },[]);
 
+
+
+
     const handleNav = ()=>{
        
         setNav(!nav);
@@ -39,11 +45,12 @@ const Navbar:React.FC = () => {
     }
     return (
        
-        <div className={shadow?'fixed  w-full h-20 shadow-xl z-[100]':'fixed w-full h-20 z-[100]'}>
+        <div className={shadow?'fixed  w-full h-20 shadow-xl z-[100] bg-white':'fixed w-full h-20 z-[100]'}>
             <div className='flex justify-between items-center w-full h-full px-2 2xl:px-16'>
               {/* <Image src={NavLogo} alt="" width={90}  height={50}  /> */}
-              <div className='rounded-full bg-pink-300 p-2  hover:bg-green-200 ease-in duration-300'>
-              <h1 className='text-[#5651e5] italic'>DS</h1>
+              <div className='p-2 flex justify-center items-center'>
+              <MdDeveloperMode className='text-black-500 mt-1' size={35} />
+              <h1 className='text-[#5651e5] font-bold' style={{fontFamily:'cursive' }}>DS</h1>
               </div>
               <div>
                 <ul className='hidden md:flex'>
@@ -90,18 +97,7 @@ const Navbar:React.FC = () => {
                        
                     </div>
                     <div className='flex items-center justify-between w-[80%] sm:w-[80%] mt-2'>
-                           <div  className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-75'>
-                            <FaLinkedinIn size={22} />
-                            </div>
-                            <div  className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-75'>
-                            <FaGithub size={22} />
-                            </div>
-                            <div  className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-75'>
-                            <AiOutlineMail size={22} />
-                            </div>
-                            <div  className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-75'>
-                            <BsPersonLinesFill size={22} />
-                            </div>
+                          
                     </div>
                </div>
                </div>

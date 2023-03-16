@@ -2,6 +2,7 @@ import React from 'react';
 import { AiOutlineMenu, AiOutlineClose, AiOutlineMail } from 'react-icons/ai';
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
 import { BsPersonLinesFill } from 'react-icons/bs';
+import ConnectMe from './ConnectMe';
 
 type MainProps = {
     
@@ -23,20 +24,12 @@ const Main:React.FC<MainProps> = () => {
                    I’m focused on building responsive  web applications
             integrating back-end technologies.
                    </p>
-                   <div className='flex items-center justify-between max-w-[330px] m-auto py-4'>
-                   <div  className='rounded-full shadow-lg shadow-gray-400 p-4 cursor-pointer hover:scale-105 ease-in duration-75'>
-                            <FaLinkedinIn />
-                            </div>
-                            <div  className='rounded-full shadow-lg shadow-gray-400 p-4 cursor-pointer hover:scale-105 ease-in duration-75'>
-                            <FaGithub />
-                            </div>
-                            <div  className='rounded-full shadow-lg shadow-gray-400 p-4 cursor-pointer hover:scale-105 ease-in duration-75'>
-                            <AiOutlineMail  />
-                            </div>
-                            <div  className='rounded-full shadow-lg shadow-gray-400 p-4 cursor-pointer hover:scale-105 ease-in duration-75'>
-                            <BsPersonLinesFill  />
-                            </div>
-                  </div>
+                   <div className='flex flex-col items-center justify-between max-w-[330px] m-auto py-4'>
+                     
+                    <button type="button" className='uppercase text-black rounded-xl 
+                     border-[#5651e5] border-2 py-3 px-3'>resume</button>
+                    <ConnectMe />
+                </div>
                 </div>
             </div>
           </div>

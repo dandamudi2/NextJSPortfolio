@@ -13,31 +13,31 @@ type ProjectsProps = {
 const Projects:React.FC<ProjectsProps> = () => {
     
     return (
-        <div id="projects" className='w-full'>
+        <div id="projects" className='w-full  flex align-center items-center'>
             <div className='max-w-[1240px] mx-auto px-2 py-16'>
              <div className='flex flex-col justify-center items-center'>
                <p className='text-xl tracking-widest uppercase text-[#5651e5]'>Projects</p>
                <h2 className='py-4'>What I've Build</h2>
              </div>
                <hr/>
-               <div className='grid md:grid-cols-2 gap-8'>
+             <div className='grid md:grid-cols-2 gap-8'>
                  <Projectitem 
                   title='Property Finder' 
-                   backgroundImg={PropertyImg.src}
+                   backgroundImg={PropertyImg}
                    projectUrl={'/property'}  />
               <Projectitem 
                   title='Crypto' 
-                   backgroundImg={cryptoImg.src}
+                   backgroundImg={cryptoImg}
                    projectUrl={'/crypto'}  />
                <Projectitem 
                   title='Netflix' 
-                   backgroundImg={netflixImg.src}
+                   backgroundImg={netflixImg}
                    projectUrl={'/netflix'}  />
              <Projectitem 
                   title='Twich' 
-                   backgroundImg={twitchImg.src}
+                   backgroundImg={twitchImg}
                    projectUrl={'/twitch'}  />
-                   
+                    
             </div>
             </div>
         </div>

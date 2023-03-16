@@ -11,12 +11,14 @@ type AboutProps = {
 const About:React.FC<AboutProps> = () => {
     
     return(
-        <div id="about" className='w-full md:h-screen p-2 flex items-center  py-16'>
+        <div id="about" className='w-full md:h-screen p-2 flex items-center  py-14'>
             <div className='max-w-[1240px] m-auto md:grid grid-cols-3 gap-8'>
                  <div className='px-2 col-span-2'>
+                  <div className='text-center'>
                     <p className='uppercase text-xl tracking-widest text-[#5651e5]'>About</p>
                     <h2 className='py-4'>Who I Am</h2>
-                    <p className='py-2 text-gray-600'>
+                  </div>
+         <p className='py-2 text-gray-600'>
             I specialize in building mobile responsive front-end UI applications
             that connect with API’s and other backend technologies. I’m
             passionate about learning new technologies and understand there is

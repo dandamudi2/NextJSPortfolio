@@ -6,6 +6,7 @@ import { AiOutlineMail } from 'react-icons/ai';
 import { BsPersonLinesFill } from 'react-icons/bs';
 import Link from 'next/link';
 import { HiOutlineChevronDoubleUp } from 'react-icons/hi';
+import ConnectMe from './ConnectMe';
 type ContactProps = {
     
 };
@@ -31,26 +32,15 @@ const Contact:React.FC<ContactProps> = () => {
                                     ease-in duration-300' src={ContactImg}  alt='/'/>
                                 </div>
                                 <div>
-                                    <h2 className='py-2'>Name here</h2>
-                                    <p>Front-End Developer</p>
-                                    <p className='py-4'>I am available for freelance or full-time positions. Contact me and let's</p>
+                                    <h2 className='py-2'>Srinivasu Dandamudi</h2>
+                                    <p>Full Stack Developer</p>
+                                    <p className='py-4'>I am available for freelance or full-time positions. Contact me </p>
                                 </div>
-                            <div>
+                            <div className='flex flex-col justify-start'>
                                 <p className='uppercase pt-8'>Connect With Me</p>
-                                <div className='flex items-center justify-between max-w-[330px] m-auto py-4'>
-                   <div  className='rounded-full shadow-lg shadow-gray-400 p-4 cursor-pointer hover:scale-105 ease-in duration-75'>
-                            <FaLinkedinIn />
-                            </div>
-                            <div  className='rounded-full shadow-lg shadow-gray-400 p-4 cursor-pointer hover:scale-105 ease-in duration-75'>
-                            <FaGithub />
-                            </div>
-                            <div  className='rounded-full shadow-lg shadow-gray-400 p-4 cursor-pointer hover:scale-105 ease-in duration-75'>
-                            <AiOutlineMail  />
-                            </div>
-                            <div  className='rounded-full shadow-lg shadow-gray-400 p-4 cursor-pointer hover:scale-105 ease-in duration-75'>
-                            <BsPersonLinesFill  />
-                            </div>
-                  </div>
+                                <div className='max-w-[330px]  py-4'>
+                                    <ConnectMe />
+                                </div>
                             </div>
                             </div>
                            
@@ -104,9 +94,8 @@ const Contact:React.FC<ContactProps> = () => {
 
                     </div>
             </div>
-            <div className='flex  justify-center py-12'>
+            <div className='flex  justify-center'>
                 <Link href="/" >
-                   
                         <div className='rounded-full shadow-lg shadow-gray-400  p-4
                         cursor-pointer hover:scale-110 ease-in duration-300'>
                         <HiOutlineChevronDoubleUp size={30} className='text-[#5651e5]' />
