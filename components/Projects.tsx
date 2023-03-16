@@ -23,7 +23,7 @@ const Projects:React.FC<ProjectsProps> = () => {
              <div className='grid md:grid-cols-2 gap-8'>
                  <Projectitem 
                   title='Property Finder' 
-                   backgroundImg={PropertyImg}
+                   backgroundImg={PropertyImg} 
                    projectUrl={'/property'}  />
               <Projectitem 
                   title='Crypto' 
