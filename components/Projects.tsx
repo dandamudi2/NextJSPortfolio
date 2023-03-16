@@ -6,6 +6,7 @@ import PropertyImg from '../public/assets/projects/property.jpg';
 import cryptoImg from '../public/assets/projects/crypto.jpg';
 import netflixImg from '../public/assets/projects/netflix.jpg';
 import twitchImg from '../public/assets/projects/twitch.jpg';
+import motorDirect from '../public/assets/projects/motorDirect.png';
 type ProjectsProps = {
     
 };
@@ -22,22 +23,25 @@ const Projects:React.FC<ProjectsProps> = () => {
                <hr/>
              <div className='grid md:grid-cols-2 gap-8'>
                  <Projectitem 
-                  title='Property Finder' 
-                   backgroundImg={PropertyImg} 
+                  title='Motor Direct' 
+                   backgroundImg={motorDirect} 
+                   technology={'Asp.net,Sql Server,C#'}
                    projectUrl={'/property'}  />
               <Projectitem 
                   title='Crypto' 
                    backgroundImg={cryptoImg}
+                   technology={'ReactJS'}
                    projectUrl={'/crypto'}  />
                <Projectitem 
                   title='Netflix' 
                    backgroundImg={netflixImg}
+                   technology={'ReactJS'}
                    projectUrl={'/netflix'}  />
              <Projectitem 
                   title='Twich' 
                    backgroundImg={twitchImg}
+                   technology={'ReactJS'}
                    projectUrl={'/twitch'}  />
-                    
             </div>
             </div>
         </div>
