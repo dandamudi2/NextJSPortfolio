@@ -45,7 +45,7 @@ const Navbar:React.FC = () => {
     }
     return (
        
-        <div className={shadow?'fixed  w-full h-20 shadow-xl z-[100] bg-white':'fixed w-full h-20 z-[100]'}>
+        <div className={shadow?'fixed w-full h-20 shadow-xl z-[100] bg-white ease-in-out duration-300':'fixed w-full h-20 z-[100]'}>
             <div className='flex justify-between items-center w-full h-full px-2 2xl:px-16'>
               {/* <Image src={NavLogo} alt="" width={90}  height={50}  /> */}
               <div className='p-2 flex justify-center items-center'>

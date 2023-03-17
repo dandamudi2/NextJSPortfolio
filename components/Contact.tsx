@@ -7,6 +7,7 @@ import { BsPersonLinesFill } from 'react-icons/bs';
 import Link from 'next/link';
 import { HiOutlineChevronDoubleUp } from 'react-icons/hi';
 import ConnectMe from './ConnectMe';
+import AppWrapper from './AppWrapper';
 type ContactProps = {
     
 };
@@ -14,8 +15,8 @@ type ContactProps = {
 const Contact:React.FC<ContactProps> = () => {
     
     return (
-        <div id="contact" className='w-full lg:h-screen'>
-            <div className='max-w-[1240px] m-auto px-2 py-16 w-full' >
+        <div  className='w-full lg:h-screen'>
+            <div className='max-w-[1240px] m-auto md:h-screen p-2' style={{paddingTop:'85px'}}>
                 <div className='text-center'>
                     <p className='text-xl tracking-widest uppercase text-[#5651e5]'>
                       Contact
@@ -100,10 +101,9 @@ const Contact:React.FC<ContactProps> = () => {
                         cursor-pointer hover:scale-110 ease-in duration-300'>
                         <HiOutlineChevronDoubleUp size={30} className='text-[#5651e5]' />
                         </div>
-                   
                 </Link>
             </div>
         </div>
     )
 }
-export default Contact;
+export default AppWrapper(Contact,'contact','flex-1 w-full  md:flex-col');
