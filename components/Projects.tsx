@@ -6,7 +6,7 @@ import AppWrapper from './AppWrapper';
 import cryptoImg from '../public/assets/projects/crypto.jpg';
 import netflixImg from '../public/assets/projects/netflix.jpg';
 import twitchImg from '../public/assets/projects/twitch.jpg';
-import motorDirect from '../public/assets/projects/motorDirect.png';
+import motorDirect from '../public/assets/projects/motorDirect123.png';
 type ProjectsProps = {
     
 };
